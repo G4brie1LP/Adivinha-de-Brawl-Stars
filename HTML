@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação do Brawl Stars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo de Adivinhação do Brawl Stars</h1>
+    </header>
+
+    <main>
+        <section id="config">
+            <h2>Configuração do Jogo</h2>
+            <label for="numJogadores">Número de Jogadores (1-4):</label>
+            <input type="number" id="numJogadores" min="1" max="4" value="1">
+            <div id="jogadores">
+                <label for="jogador1">Nome do Jogador 1:</label>
+                <input type="text" id="jogador1">
+                <label for="jogador2">Nome do Jogador 2:</label>
+                <input type="text" id="jogador2">
+                <label for="jogador3">Nome do Jogador 3:</label>
+                <input type="text" id="jogador3">
+                <label for="jogador4">Nome do Jogador 4:</label>
+                <input type="text" id="jogador4">
+            </div>
+
+            <label for="dificuldade">Dificuldade:</label>
+            <select id="dificuldade">
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+            </select>
+
+            <label for="modoJogo">Modo de Jogo:</label>
+            <select id="modoJogo">
+                <option value="1">Brawlers</option>
+                <option value="2">Mapas</option>
+                <option value="3">Modos de Jogo</option>
+                <option value="4">Skins</option>
+            </select>
+
+            <button id="startGame">Iniciar Jogo</button>
+        </section>
+
+        <section id="game" style="display:none;">
+            <h2>Rodada <span id="round">1</span></h2>
+            <p id="playerTurn">Turno de <span id="currentPlayer"></span></p>
+            <p id="wordDisplay">Palavra: <span id="word"></span></p>
+            <input type="text" id="guessInput" placeholder="Digite uma letra ou '3' para adivinhar a palavra completa">
+            <button id="submitGuess">Enviar Palpite</button>
+            <p id="feedback"></p>
+            <p id="remainingChances"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jogo de Adivinhação do Brawl Stars. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
