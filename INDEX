@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação do Brawl Stars</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="config">
+        <h1>Configuração do Jogo</h1>
+        <label for="numJogadores">Número de Jogadores:</label>
+        <input type="number" id="numJogadores" min="1" max="4" value="1">
+        <div id="jogadores">
+            <input type="text" id="jogador1" placeholder="Nome do Jogador 1">
+            <input type="text" id="jogador2" placeholder="Nome do Jogador 2">
+            <input type="text" id="jogador3" placeholder="Nome do Jogador 3" style="display:none;">
+            <input type="text" id="jogador4" placeholder="Nome do Jogador 4" style="display:none;">
+        </div>
+        <label for="dificuldade">Dificuldade:</label>
+        <select id="dificuldade">
+            <option value="1">Fácil</option>
+            <option value="2">Médio</option>
+            <option value="3">Difícil</option>
+        </select>
+        <label for="modoJogo">Modo de Jogo:</label>
+        <select id="modoJogo">
+            <option value="1">Brawlers</option>
+            <option value="2">Mapas</option>
+            <option value="3">Modos de Jogo</option>
+            <option value="4">Skins</option>
+        </select>
+        <button id="startGame">Iniciar Jogo</button>
+    </div>
+    <div id="game" style="display:none;">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Rodada: <span id="round"></span></p>
+        <p>Vez do Jogador: <span id="playerTurn"></span></p>
+        <p>Palavra: <span id="word"></span></p>
+        <input type="text" id="guess" placeholder="Digite uma letra">
+        <button id="submitGuess">Enviar Palpite</button>
+        <p id="feedback"></p>
+        <p>Chances Restantes: <span id="remainingChances"></span></p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
